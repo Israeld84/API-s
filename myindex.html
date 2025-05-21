@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="mystyle.css">
-  <title>User Posts</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Motor Car Listings</title>
+  <link rel="stylesheet" href="mystyle.css" />
 </head>
-
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="user-list">
-        <div class="user">
-          <div class="user-card">
-            <div class="user-card__container">
-              <h3>User's Name</h4>
-                <p><b>Email:</b> email@email.com</p>
-                <p><b>Phone:</b> 0000000000</p>
-                <p><b>Website:</b> <a href="https://website.website" target="_blank">website.website</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <header>
+    <h1> Car Gallery</h1>
+  </header>
+
+  <main>
+    <section id="controls">
+      <input type="text" id="searchInput" placeholder="Search by make or model" />
+      <select id="sortSelect">
+        <option value="">Sort by</option>
+        <option value="year">Year (Newest)</option>
+        <option value="make">Make (A–Z)</option>
+      </select>
+    </section>
+
+    <section id="car-list"></section>
+
+    <section id="add-car-form">
+      <h2>Add a Car</h2>
+      <form id="newCarForm">
+        <input type="text" id="make" placeholder="Make" required />
+        <input type="text" id="model" placeholder="Model" required />
+        <input type="number" id="year" placeholder="Year" required />
+        <input type="text" id="image" placeholder="Image URL" required />
+        <button type="submit">Add Car</button>
+      </form>
+    </section>
+  </main>
+
+  <div id="carModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button" id="closeModal">&times;</span>
+      <img id="modalImage" />
+      <h2 id="modalTitle"></h2>
+      <p id="modalYear"></p>
     </div>
   </div>
-</body>
-<script src="myscript.js"></script>
 
+  <script src="myscript.js"></script>
+</body>
 </html>
