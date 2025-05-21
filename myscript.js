@@ -10,16 +10,16 @@ const modalYear = document.getElementById("modalYear");
 const closeModal = document.getElementById("closeModal");
 
 let cars = JSON.parse(localStorage.getItem("cars")) || [
-  { id: 1, make: "Toyota", model: "Corolla", year: 2021, image: "https://source.unsplash.com/400x200/?toyota" },
-  { id: 2, make: "Ford", model: "Mustang", year: 2022, image: "https://source.unsplash.com/400x200/?mustang" },
-  { id: 3, make: "Tesla", model: "Model S", year: 2023, image: "https://source.unsplash.com/400x200/?tesla" },
-  { id: 4, make: "BMW", model: "X5", year: 2020, image: "https://source.unsplash.com/400x200/?bmw" },
-  { id: 5, make: "Honda", model: "Civic", year: 2019, image: "https://source.unsplash.com/400x200/?honda" },
-  { id: 6, make: "Audi", model: "A4", year: 2022, image: "https://source.unsplash.com/400x200/?audi" },
-  { id: 7, make: "Chevrolet", model: "Camaro", year: 2021, image: "https://source.unsplash.com/400x200/?camaro" },
-  { id: 8, make: "Nissan", model: "Altima", year: 2018, image: "https://source.unsplash.com/400x200/?nissan" },
-  { id: 9, make: "Jeep", model: "Wrangler", year: 2021, image: "https://source.unsplash.com/400x200/?jeep" },
-  { id: 10, make: "Mercedes", model: "C-Class", year: 2022, image: "https://source.unsplash.com/400x200/?mercedes" }
+  { id: 1, make: "Toyota", model: "Corolla", year: 2021, image: "" },
+  { id: 2, make: "Ford", model: "Mustang", year: 2022, image: "" },
+  { id: 3, make: "Tesla", model: "Model S", year: 2023, image: "" },
+  { id: 4, make: "BMW", model: "X5", year: 2020, image: "" },
+  { id: 5, make: "Honda", model: "Civic", year: 2019, image: "" },
+  { id: 6, make: "Audi", model: "A4", year: 2022, image: "" },
+  { id: 7, make: "Chevrolet", model: "Camaro", year: 2021, image: "" },
+  { id: 8, make: "Nissan", model: "Altima", year: 2018, image: "" },
+  { id: 9, make: "Jeep", model: "Wrangler", year: 2021, image: "" },
+  { id: 10, make: "Mercedes", model: "C-Class", year: 2022, image: "" }
 ];
 
 function saveCars() {
@@ -53,7 +53,7 @@ function renderCars() {
         <h3>${car.make} ${car.model}</h3>
         <p>${car.year}</p>
       </div>
-      <button class="delete-btn" onclick="deleteCar(${car.id})">Delete</button>
+     
     `;
     card.addEventListener("click", (e) => {
       if (!e.target.classList.contains("delete-btn")) {
