@@ -60,7 +60,7 @@ closeModal.addEventListener("click", () => {
   modal.classList.add("hidden");
 });
 
-// ✅ VIN decoding only populates the fields
+//  decoding only populates the fields
 decodeBtn.addEventListener("click", async () => {
   const vin = document.getElementById("vin").value.trim();
   if (!vin) return alert("Please enter a VIN.");
@@ -88,7 +88,7 @@ decodeBtn.addEventListener("click", async () => {
   }
 });
 
-// ✅ Submit handler adds car to list
+//  adds car to list
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const make = document.getElementById("make").value.trim();
