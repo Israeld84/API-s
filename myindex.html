@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1> Car Gallery</h1>
+    <h1>Car Gallery</h1>
   </header>
 
   <main>
@@ -24,12 +24,17 @@
     <section id="car-list"></section>
 
     <section id="add-car-form">
-      <h2>Search for a Car</h2>
+      <h2>Add a Car</h2>
       <form id="newCarForm">
+        <input type="text" id="vin" placeholder="Enter VIN to auto-fill" />
+        <button type="button" id="decodeVinBtn">Decode VIN</button>
+        <p id="vinMessage" style="color: #555; font-style: italic;"></p>
+
         <input type="text" id="make" placeholder="Make" required />
         <input type="text" id="model" placeholder="Model" required />
         <input type="number" id="year" placeholder="Year" required />
-        <button type="submit">Search</button>
+        <input type="text" id="image" placeholder="Image URL (optional)" />
+        <button type="submit">Add Car</button>
       </form>
     </section>
   </main>
